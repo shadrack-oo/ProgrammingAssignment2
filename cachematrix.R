@@ -3,7 +3,7 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) { # create the first function "makeCacheMatrix" 
   inv <- NULL # Initiating the inverse 
   set <- function(y){
     x <<- y
@@ -32,4 +32,8 @@ cacheSolve <- function(x,...){## gets cache data
   x$setInverse(inv)
   inv
 }
+
+pmatrix <- makeCacheMatrix(matrix(1:4,2,2))# create a matrix
+cacheSolve(pmatrix) #create the cache
+pmatrix$getInverse()# invert the matrix
 
